@@ -240,3 +240,18 @@ def recipe_search(search_string,num_of_pages):
     recipe_text_df = pd.DataFrame(recipe_text_list)
     browser.quit()
     return top_recipe_df, recipe_text_df
+
+
+# USE THIS CELL TO PULL SPECIFIC RECIPE TITLE
+def recipe_select(top_recipes_df):   
+    go = True
+    #enter row index for row_index variable
+    while go:  
+        row_index = int(input('Enter the row index for the recipe you wish to see: '))
+        try:
+            recipe_title = top_recipes_df.iloc[row_index,0]
+            go = False
+        except:
+            print('Error occured with index value, please check to make sure the index exists in the table and try again.')
+            
+    return recipe_title
