@@ -1,4 +1,4 @@
-def get_recipe(recipe_name):
+def get_recipe(recipe_name, recipe_text_df):
     
     ingredient_list = recipe_text_df[recipe_text_df['title'] == recipe_name]['recipe']\
                                                     .values[0]['Ingredients']
@@ -18,7 +18,11 @@ def get_recipe(recipe_name):
         print(steps[x][f"Step {step}"])
         print("----------------------")
         
-def recipe_scrape(url):
+def recipe_scrape(url,browser):
+    from bs4 import BeautifulSoup
+    from splinter import Browser
+    import pandas as pd
+    
     browser.visit(url)
     
     html = browser.html
@@ -71,6 +75,7 @@ def recipe_search(search_string,num_of_pages):
     from bs4 import BeautifulSoup
     import pandas as pd
     import time
+    import funcs
     
     recipe_list = []
     title_list = []
@@ -78,6 +83,7 @@ def recipe_search(search_string,num_of_pages):
     string = search_string.replace(' ','+')
     url = f'https://www.allrecipes.com/search?q={string}'
     
+    browser = Browser('chrome')
     browser.visit(url)
     
     x = range(num_of_pages)
@@ -114,7 +120,7 @@ def recipe_search(search_string,num_of_pages):
                     title_list.append(title)
                     
                     recipe_text_dict['title'] = title
-                    recipe_text_dict['recipe'] = recipe_scrape(recipe_url)
+                    recipe_text_dict['recipe'] = funcs.recipe_scrape(recipe_url,browser)
                     recipe_text_list.append(recipe_text_dict)
                     
                 recipe_list.append(recipe_dict)
