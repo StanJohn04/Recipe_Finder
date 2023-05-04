@@ -20,3 +20,5 @@ Well look no further! The goal of this project is to use web scraping to find th
 
 * Eventually
   * I envision a dashboard that displays all the information in an aesthetically pleasing way
+  * Have recipe_search() return all recipes in df as well as the top_recipes_df
+    * allow user to choose which df to search (all_recipes or top_recipes)
