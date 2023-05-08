@@ -7,6 +7,7 @@ Well look no further! The goal of this project is to use web scraping to find th
 
 # HouseKeeping
 * The functions in [funcs.py](https://github.com/StanJohn04/Recipe_Finder/blob/main/funcs.py) import all their dependencies, so as long as you have them installed the   program should work fine.
+  * Python version 3.10.11 was used for development
   * The following python libraries are used:
     * bs4 - [docs](https://pypi.org/project/bs4/)
     * splinter - [docs](https://splinter.readthedocs.io/en/latest/)
