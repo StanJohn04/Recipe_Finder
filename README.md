@@ -5,6 +5,15 @@ Do you ever have trouble picking out a recipe for dinner? Are you tired of cooki
 
 Well look no further! The goal of this project is to use web scraping to find the best recipes on the web and return them to you for easy access. Want to bake a coconut cake but not sure which recipe to choose? Just enter 'coconut cake' and get a list of the top recipes delievered right to your screen! All in a (relatively) short amount of time!
 
+# In Action
+* User is prompted to enter a search term and then the progrem scapes all recipes related to that term
+ ![image](https://github.com/StanJohn04/Recipe_Finder/assets/121142680/33917a55-9459-45c7-9d6d-35e37e7b69b7)
+
+* All top-rated recipes are stored in a df and the user is asked to enter the index of the desired recipe
+* the program then prints out the ingredients and cooking instructions
+![image](https://github.com/StanJohn04/Recipe_Finder/assets/121142680/dd38d62d-4ec7-4163-b5b4-649666314ad3)
+
+
 # HouseKeeping
 * The functions in [funcs.py](https://github.com/StanJohn04/Recipe_Finder/blob/main/funcs.py) import all their dependencies, so as long as you have them installed the   program should work fine.
   * Python version 3.10.11 was used for development
