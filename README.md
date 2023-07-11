@@ -6,7 +6,7 @@ Do you ever have trouble picking out a recipe for dinner? Are you tired of cooki
 Well look no further! The goal of this project is to use web scraping to find the best recipes on the web and return them to you for easy access. Want to bake a coconut cake but not sure which recipe to choose? Just enter 'coconut cake' and get a list of the top recipes delievered right to your screen! All in a (relatively) short amount of time!
 
 # In Action
-* User is prompted to enter a search term and then the progrem scapes all recipes related to that term
+* User is prompted to enter a search term and then the program scapes all recipes related to that term
  ![image](https://github.com/StanJohn04/Recipe_Finder/assets/121142680/33917a55-9459-45c7-9d6d-35e37e7b69b7)
 
 * All top-rated recipes are stored in a df and the user is asked to enter the index of the desired recipe
